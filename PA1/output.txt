@@ -1,0 +1,365 @@
+java -classpath /usr/class/cs143/cool/lib/jlex.jar JLex.Main cool.lex
+Processing first section -- user code.
+Processing second section -- JLex declarations.
+Processing third section -- lexical rules.
+Creating NFA machine representation.
+NFA comprised of 313 states.
+Working on character classes.::::.:...:....::...:..:.:.:...::.:......:........:....................:.:.::.::.:::..:..:::::::::...:.::..::::.:.:.:.:...........:.......................
+NFA has 65 distinct character classes.
+Creating DFA transition table.
+Working on DFA states.......................................................................................................................................................................................
+Minimizing DFA transition table.
+173 states after removal of redundant states.
+Outputting lexical analyzer code.
+mv cool.lex.java CoolLexer.java
+javac -classpath /usr/class/cs143/cool/lib/java-cup-11a.jar:/usr/class/cs143/cool/lib/jlex.jar:.:/usr/java/lib/rt.jar AbstractSymbol.java AbstractTable.java BoolConst.java CgenSupport.java Flags.java IdSymbol.java IdTable.java IntSymbol.java IntTable.java Lexer.java StringSymbol.java StringTable.java TokenConstants.java Utilities.java CoolLexer.java
+echo '#!/bin/sh' >> lexer
+echo 'java -classpath /usr/class/cs143/cool/lib/java-cup-11a.jar:/usr/class/cs143/cool/lib/jlex.jar:.:/usr/java/lib/rt.jar:`dirname $0` Lexer $*' >> lexer
+chmod 755 lexer
+./lexer test.cl
+#name "test.cl"
+#5 CLASS
+#5 TYPEID CellularAutomaton
+#5 INHERITS
+#5 TYPEID IO
+#5 '{'
+#6 OBJECTID population_map
+#6 ':'
+#6 TYPEID String
+#6 ';'
+#8 OBJECTID init
+#8 '('
+#8 OBJECTID map
+#8 ':'
+#8 TYPEID String
+#8 ')'
+#8 ':'
+#8 TYPEID SELF_TYPE
+#8 '{'
+#9 '{'
+#10 OBJECTID population_map
+#10 ASSIGN
+#10 OBJECTID map
+#10 ';'
+#11 OBJECTID self
+#11 ';'
+#12 '}'
+#13 '}'
+#13 ';'
+#17 OBJECTID print
+#17 '('
+#17 ')'
+#17 ':'
+#17 TYPEID SELF_TYPE
+#17 '{'
+#18 '{'
+#19 OBJECTID out_string
+#19 '('
+#19 OBJECTID population_map
+#19 '.'
+#19 OBJECTID concat
+#19 '('
+#19 STR_CONST "\n"
+#19 ')'
+#19 ')'
+#19 ';'
+#20 OBJECTID self
+#20 ';'
+#21 '}'
+#22 '}'
+#22 ';'
+#24 OBJECTID num_cells
+#24 '('
+#24 ')'
+#24 ':'
+#24 TYPEID Int
+#24 '{'
+#25 OBJECTID population_map
+#25 '.'
+#25 OBJECTID length
+#25 '('
+#25 ')'
+#26 '}'
+#26 ';'
+#28 OBJECTID cell
+#28 '('
+#28 OBJECTID position
+#28 ':'
+#28 TYPEID Int
+#28 ')'
+#28 ':'
+#28 TYPEID String
+#28 '{'
+#29 OBJECTID population_map
+#29 '.'
+#29 OBJECTID substr
+#29 '('
+#29 OBJECTID position
+#29 ','
+#29 INT_CONST 1
+#29 ')'
+#30 '}'
+#30 ';'
+#32 OBJECTID cell_left_neighbor
+#32 '('
+#32 OBJECTID position
+#32 ':'
+#32 TYPEID Int
+#32 ')'
+#32 ':'
+#32 TYPEID String
+#32 '{'
+#33 IF
+#33 OBJECTID position
+#33 '='
+#33 INT_CONST 0
+#33 THEN
+#34 OBJECTID cell
+#34 '('
+#34 OBJECTID num_cells
+#34 '('
+#34 ')'
+#34 '-'
+#34 INT_CONST 1
+#34 ')'
+#35 ELSE
+#36 OBJECTID cell
+#36 '('
+#36 OBJECTID position
+#36 '-'
+#36 INT_CONST 1
+#36 ')'
+#37 FI
+#38 '}'
+#38 ';'
+#40 OBJECTID cell_right_neighbor
+#40 '('
+#40 OBJECTID position
+#40 ':'
+#40 TYPEID Int
+#40 ')'
+#40 ':'
+#40 TYPEID String
+#40 '{'
+#41 IF
+#41 OBJECTID position
+#41 '='
+#41 OBJECTID num_cells
+#41 '('
+#41 ')'
+#41 '-'
+#41 INT_CONST 1
+#41 THEN
+#42 OBJECTID cell
+#42 '('
+#42 INT_CONST 0
+#42 ')'
+#43 ELSE
+#44 OBJECTID cell
+#44 '('
+#44 OBJECTID position
+#44 '+'
+#44 INT_CONST 1
+#44 ')'
+#45 FI
+#46 '}'
+#46 ';'
+#49 OBJECTID cell_at_next_evolution
+#49 '('
+#49 OBJECTID position
+#49 ':'
+#49 TYPEID Int
+#49 ')'
+#49 ':'
+#49 TYPEID String
+#49 '{'
+#50 IF
+#50 '('
+#50 IF
+#50 OBJECTID cell
+#50 '('
+#50 OBJECTID position
+#50 ')'
+#50 '='
+#50 STR_CONST "X"
+#50 THEN
+#50 INT_CONST 1
+#50 ELSE
+#50 INT_CONST 0
+#50 FI
+#51 '+'
+#51 IF
+#51 OBJECTID cell_left_neighbor
+#51 '('
+#51 OBJECTID position
+#51 ')'
+#51 '='
+#51 STR_CONST "X"
+#51 THEN
+#51 INT_CONST 1
+#51 ELSE
+#51 INT_CONST 0
+#51 FI
+#52 '+'
+#52 IF
+#52 OBJECTID cell_right_neighbor
+#52 '('
+#52 OBJECTID position
+#52 ')'
+#52 '='
+#52 STR_CONST "X"
+#52 THEN
+#52 INT_CONST 1
+#52 ELSE
+#52 INT_CONST 0
+#52 FI
+#53 '='
+#53 INT_CONST 1
+#53 ')'
+#54 THEN
+#55 STR_CONST "X"
+#56 ELSE
+#57 ERROR "LEXER BUG - UNMATCHED: '''"
+#57 '.'
+#57 ERROR "LEXER BUG - UNMATCHED: '''"
+#58 FI
+#59 '}'
+#59 ';'
+#61 OBJECTID evolve
+#61 '('
+#61 ')'
+#61 ':'
+#61 TYPEID SELF_TYPE
+#61 '{'
+#62 '('
+#62 LET
+#62 OBJECTID position
+#62 ':'
+#62 TYPEID Int
+#62 IN
+#63 '('
+#63 LET
+#63 OBJECTID num
+#63 ':'
+#63 TYPEID Int
+#63 ASSIGN
+#63 OBJECTID num_cells
+#63 ERROR "LEXER BUG - UNMATCHED: '['"
+#63 ERROR "LEXER BUG - UNMATCHED: ']'"
+#63 IN
+#64 '('
+#64 LET
+#64 OBJECTID temp
+#64 ':'
+#64 TYPEID String
+#64 IN
+#65 '{'
+#66 WHILE
+#66 OBJECTID position
+#66 '<'
+#66 OBJECTID num
+#66 LOOP
+#67 '{'
+#68 OBJECTID temp
+#68 ASSIGN
+#68 OBJECTID temp
+#68 '.'
+#68 OBJECTID concat
+#68 '('
+#68 OBJECTID cell_at_next_evolution
+#68 '('
+#68 OBJECTID position
+#68 ')'
+#68 ')'
+#68 ';'
+#69 OBJECTID position
+#69 ASSIGN
+#69 OBJECTID position
+#69 '+'
+#69 INT_CONST 1
+#69 ';'
+#70 '}'
+#71 POOL
+#71 ';'
+#72 OBJECTID population_map
+#72 ASSIGN
+#72 OBJECTID temp
+#72 ';'
+#73 OBJECTID self
+#73 ';'
+#74 '}'
+#75 ')'
+#75 ')'
+#75 ')'
+#76 '}'
+#76 ';'
+#77 '}'
+#77 ';'
+#79 CLASS
+#79 TYPEID Main
+#79 '{'
+#80 OBJECTID cells
+#80 ':'
+#80 TYPEID CellularAutomaton
+#80 ';'
+#82 OBJECTID main
+#82 '('
+#82 ')'
+#82 ':'
+#82 TYPEID SELF_TYPE
+#82 '{'
+#83 '{'
+#84 OBJECTID cells
+#84 ASSIGN
+#84 '('
+#84 NEW
+#84 TYPEID CellularAutomaton
+#84 ')'
+#84 '.'
+#84 OBJECTID init
+#84 '('
+#84 STR_CONST "         X         "
+#84 ')'
+#84 ';'
+#85 OBJECTID cells
+#85 '.'
+#85 OBJECTID print
+#85 '('
+#85 ')'
+#85 ';'
+#86 '('
+#86 LET
+#86 OBJECTID countdown
+#86 ':'
+#86 TYPEID Int
+#86 ASSIGN
+#86 INT_CONST 20
+#86 IN
+#87 WHILE
+#87 OBJECTID countdown
+#87 ERROR "LEXER BUG - UNMATCHED: '>'"
+#87 INT_CONST 0
+#87 LOOP
+#88 '{'
+#89 OBJECTID cells
+#89 '.'
+#89 OBJECTID evolve
+#89 '('
+#89 ')'
+#89 ';'
+#90 OBJECTID cells
+#90 '.'
+#90 OBJECTID print
+#90 '('
+#90 ')'
+#90 ';'
+#91 OBJECTID countdown
+#91 ASSIGN
+#91 OBJECTID countdown
+#91 '-'
+#91 INT_CONST 1
+#91 ';'
+#93 POOL
+#94 ')'
+#94 ';'
+#99 ERROR "EOF in comment"

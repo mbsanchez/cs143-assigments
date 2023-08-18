@@ -1,0 +1,49 @@
+#!/bin/sh
+rm AbstractSymbol.java
+rm AbstractTable.java
+rm BoolConst.java
+rm CgenClassTable.java
+rm CgenNode.java
+rm CgenSupport.java
+rm ClassTable.java
+rm CoolTokenLexer.java
+rm cool-tree.aps
+rm cool-tree.java
+rm Flags.java
+rm IdSymbol.java
+rm IdTable.java
+rm IntSymbol.java
+rm IntTable.java
+rm ListNode.java
+rm Makefile
+rm Parser.java
+rm StringSymbol.java
+rm StringTable.java
+rm SymbolTable.java
+rm TreeConstants.java
+rm TreeNode.java
+rm Utilities.java
+cp /usr/class/cs143/cool/src/PA3J/AbstractSymbol.java .
+cp /usr/class/cs143/cool/src/PA3J/AbstractTable.java .
+cp /usr/class/cs143/cool/src/PA3J/BoolConst.java .
+cp /usr/class/cs143/cool/src/PA3J/CgenClassTable.java .
+cp /usr/class/cs143/cool/src/PA3J/CgenNode.java .
+cp /usr/class/cs143/cool/src/PA3J/CgenSupport.java .
+cp /usr/class/cs143/cool/src/PA3J/ClassTable.java .
+cp /usr/class/cs143/cool/src/PA3J/CoolTokenLexer.java .
+cp /usr/class/cs143/cool/src/PA3J/cool-tree.aps .
+cp /usr/class/cs143/cool/src/PA3J/cool-tree.java .
+cp /usr/class/cs143/cool/src/PA3J/Flags.java .
+cp /usr/class/cs143/cool/src/PA3J/IdSymbol.java .
+cp /usr/class/cs143/cool/src/PA3J/IdTable.java .
+cp /usr/class/cs143/cool/src/PA3J/IntSymbol.java .
+cp /usr/class/cs143/cool/src/PA3J/IntTable.java .
+cp /usr/class/cs143/cool/src/PA3J/ListNode.java .
+cp /usr/class/cs143/cool/etc/../assignments/PA3J/Makefile .
+cp /usr/class/cs143/cool/src/PA3J/Parser.java .
+cp /usr/class/cs143/cool/src/PA3J/StringSymbol.java .
+cp /usr/class/cs143/cool/src/PA3J/StringTable.java .
+cp /usr/class/cs143/cool/src/PA3J/SymbolTable.java .
+cp /usr/class/cs143/cool/src/PA3J/TreeConstants.java .
+cp /usr/class/cs143/cool/src/PA3J/TreeNode.java .
+cp /usr/class/cs143/cool/src/PA3J/Utilities.java .

@@ -1,0 +1,42 @@
+#!/bin/sh
+rm AbstractSymbol.java
+rm AbstractTable.java
+rm ASTConstants.java
+rm ASTLexer.java
+rm ASTParser.java.bak
+rm Cgen.java
+rm ClassTable.java.bak
+rm cool-tree.aps
+rm Flags.java
+rm IdSymbol.java
+rm IdTable.java
+rm IntTable.java
+rm ListNode.java
+rm Makefile
+rm StringTable.java
+rm SymbolTable.java
+rm SymtabExample.java
+rm TokenConstants.java
+rm TreeNode.java
+rm Utilities.java
+
+cp /usr/class/cs143/cool/src/PA5J/AbstractSymbol.java .
+cp /usr/class/cs143/cool/src/PA5J/AbstractTable.java .
+cp /usr/class/cs143/cool/src/PA5J/ASTConstants.java .
+cp /usr/class/cs143/cool/src/PA5J/ASTLexer.java .
+cp /usr/class/cs143/cool/src/PA5J/ASTParser.java ASTParser.java.bak
+cp /usr/class/cs143/cool/src/PA5J/Cgen.java .
+cp /usr/class/cs143/cool/src/PA5J/ClassTable.java ClassTable.java.bak
+cp /usr/class/cs143/cool/src/PA5J/cool-tree.aps .
+cp /usr/class/cs143/cool/src/PA5J/Flags.java .
+cp /usr/class/cs143/cool/src/PA5J/IdSymbol.java .
+cp /usr/class/cs143/cool/src/PA5J/IdTable.java .
+cp /usr/class/cs143/cool/src/PA5J/IntTable.java .
+cp /usr/class/cs143/cool/src/PA5J/ListNode.java .
+cp /usr/class/cs143/cool/etc/../assignments/PA5J/Makefile .
+cp /usr/class/cs143/cool/src/PA5J/StringTable.java .
+cp /usr/class/cs143/cool/src/PA5J/SymbolTable.java .
+cp /usr/class/cs143/cool/src/PA5J/SymtabExample.java .
+cp /usr/class/cs143/cool/src/PA5J/TokenConstants.java .
+cp /usr/class/cs143/cool/src/PA5J/TreeNode.java .
+cp /usr/class/cs143/cool/src/PA5J/Utilities.java .

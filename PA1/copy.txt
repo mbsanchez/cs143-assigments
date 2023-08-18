@@ -1,0 +1,29 @@
+#!/bin/sh
+rm AbstractSymbol.java
+rm AbstractTable.java
+rm BoolConst.java
+rm CgenSupport.java
+rm Flags.java
+rm IdSymbol.java
+rm IdTable.java
+rm IntSymbol.java
+rm IntTable.java
+rm Lexer.java
+rm StringSymbol.java
+rm StringTable.java
+rm TokenConstants.java
+rm Utilities.java
+cp -f /usr/class/cs143/cool/src/PA2J/AbstractSymbol.java .
+cp -f /usr/class/cs143/cool/src/PA2J/AbstractTable.java .
+cp -f /usr/class/cs143/cool/src/PA2J/BoolConst.java .
+cp -f /usr/class/cs143/cool/src/PA2J/CgenSupport.java .
+cp -f /usr/class/cs143/cool/src/PA2J/Flags.java .
+cp -f /usr/class/cs143/cool/src/PA2J/IdSymbol.java .
+cp -f /usr/class/cs143/cool/src/PA2J/IdTable.java .
+cp -f /usr/class/cs143/cool/src/PA2J/IntSymbol.java .
+cp -f /usr/class/cs143/cool/src/PA2J/IntTable.java .
+cp -f /usr/class/cs143/cool/src/PA2J/Lexer.java .
+cp -f /usr/class/cs143/cool/src/PA2J/StringSymbol.java .
+cp -f /usr/class/cs143/cool/src/PA2J/StringTable.java .
+cp -f /usr/class/cs143/cool/src/PA2J/TokenConstants.java .
+cp -f /usr/class/cs143/cool/src/PA2J/Utilities.java .
